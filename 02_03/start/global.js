@@ -1,10 +1,7 @@
-const path = require("path");
+console.log(process.argv);
 
-console.log(__dirname);
-console.log(
-  `The file name is ${path.basename(__filename)}`
-);
-
-for (let key in global) {
-  console.log(key);
-}
+const grab = (flag) => {
+  return process.argv[process.argv.indexOf(flag) + 1];
+};
+let company = grab('--company');
+console.log(company);
